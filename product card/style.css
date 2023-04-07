@@ -1,8 +1,5 @@
-/* importing Poppins font from Google cdn */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
-/* CSS Common for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,8 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* CSS For Cards & It's Components */
 .cards-container {
     max-width: 1200px;
     display: flex;
@@ -53,12 +48,7 @@ body {
     max-width: 300px;
     height: 100%;
     border-radius: 25px;
-    /* border: 1px solid rgba(255, 255, 255, 0.25);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5); */
     border: 2px solid rgba(0, 0, 0, 0.1);
-    /* border-top: 2px solid rgba(0, 0, 0, 0.15);
-    border-left: 2px solid rgba(0, 0, 0, 0.15); */
     background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.5px);
@@ -69,8 +59,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
-
 
 .title-container {
     position: absolute;
@@ -100,8 +88,6 @@ body {
     transform: scale(1.15);
 }
 
-
-/* CSS for the colored circles */
 .product-color {
     display: flex;
     flex-direction: column;
@@ -163,8 +149,6 @@ body {
     background: rgb(255, 45, 85);
 }
 
-
-/* CSS for the Add To Cart Button */
 .cart-button {
     padding: 10px 20px;
     text-decoration: none;
