@@ -337,4 +337,5 @@ button:focus {
 
 .row {
     display: flex;
+    justify-content: center;
 }
