@@ -9,6 +9,10 @@ body {
     background: linear-gradient(300deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
 }
 
+* {
+    font-family: sans-serif;
+}
+
 .container .btn {
     position: relative;
     top: 0;
@@ -20,125 +24,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.container .btn1 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 300px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    .container .btn1 a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 30px;
-        padding: 10px;
-        letter-spacing: 1px;
-        text-decoration: none;
-        overflow: hidden;
-        color: #fff;
-        font-weight: 400px;
-        z-index: 1;
-        transition: 0.5s;
-        backdrop-filter: blur(15px);
-    }
-
-    .container .btn1 a::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-        transform: skewX(45deg) translate(0);
-        transition: 0.5s;
-        filter: blur(0px);
-    }
-
-    .container .btn1:hover a::before {
-        transform: skewX(45deg) translate(200px);
-    }
-
-    .container .btn1::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        bottom: -5px;
-        width: 30px;
-        height: 10px;
-        background: #f00;
-        border-radius: 10px;
-        transition: 0.5s;
-        transition-delay: 0.5;
-    }
-
-    .container .btn1:hover::before {
-        bottom: 0;
-        height: 50%;
-        width: 80%;
-        border-radius: 30px;
-    }
-
-    .container .btn1::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        top: -5px;
-        width: 30px;
-        height: 10px;
-        background: #f00;
-        border-radius: 10px;
-        transition: 0.5s;
-        transition-delay: 0.5;
-    }
-
-    .container .btn1:hover::after {
-        top: 0;
-        height: 50%;
-        width: 80%;
-        border-radius: 30px;
-    }
-
-    .container .btn1:nth-child(1)::before, 
-    .container .btn1:nth-child(1)::after {
-        background: #ff1f71;
-        box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
-    }
-
-    .container .btn1:nth-child(2)::before,
-    .container .btn1:nth-child(2)::after {
-        background: #2db2ff;
-        box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
-    }
-
-    .container .btn1:nth-child(3)::before,
-    .container .btn1:nth-child(3)::after {
-        background: #1eff45;
-        box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
-    }
-    .container .btn1:nth-child(4)::before,
-    .container .btn1:nth-child(4)::after {
-        background: #2db2ff;
-        box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
-    }
 
     .container .btn a {
         position: absolute;
@@ -197,7 +82,6 @@ body {
         background: #f00;
         border-radius: 10px;
         transition: 0.5s;
-        transition-delay: 0.5;
     }
 
     .container .btn:hover::before {
@@ -218,7 +102,6 @@ body {
         background: #f00;
         border-radius: 10px;
         transition: 0.5s;
-        transition-delay: 0.5;
     }
 
     .container .btn:hover::after {
@@ -249,10 +132,6 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
-}
-
-.container {
-    display: flex;
     align-items: center;
     padding: 40px 0;
 }
@@ -397,10 +276,8 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1;
-    transform: 0.5s;
     color: #fff;
 }
-
 
 .container .box .content h2 {
     font-size: 2em;
@@ -432,10 +309,6 @@ body {
         box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
     }
 
-* {
-    font-family: sans-serif;
-}
-
 .content_wrapper {
     display: flex;
     justify-content: center;
@@ -443,65 +316,6 @@ body {
     marign: 0 auto;
     flex-wrap: wrap;
     flex-direction: column;
-}
-
-.card_bg {
-    background: url(https://i.ibb.co/M9LB3Kq/Glassmorphism-Background.png);
-    background-size: cover;
-    padding: 0;
-    width: 40vw;
-    height: 40vh;
-    background-color: #eee;
-    top: 0;
-    left: 0;
-}
-
-.card1 {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 30px;
-    margin: 15px;
-    background: linear-gradient(315deg, #d04141, #be00ff);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 16.5px );
-    -webkit-backdrop-filter: blur( 16.5px );
-    border-radius: 30px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.card2 {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 30px;
-    margin: 15px;
-    background: linear-gradient(315deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 16.5px );
-    -webkit-backdrop-filter: blur( 16.5px );
-    border-radius: 30px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.card3 {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 30px;
-    margin: 15px;
-    background: linear-gradient(315deg, #ff03f7, #00d0ff);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 16.5px );
-    -webkit-backdrop-filter: blur( 16.5px );
-    border-radius: 30px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 sup {
