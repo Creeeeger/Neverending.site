@@ -7,6 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(300deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
+    zoom: 100%;
 }
 
 * {
