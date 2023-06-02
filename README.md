@@ -3,5 +3,5 @@ PreHost of Neverending game Website.
 
 
 ### Roadmap
-- optimising changelog (styles.css)
-- optimising index.html
+- Adding more functionality
+- Replacing the placeholder media
