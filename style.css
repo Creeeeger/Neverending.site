@@ -340,3 +340,42 @@ button:focus {
     display: flex;
     justify-content: center;
 }
+
+        @media screen and (max-width: 1000px) {
+            body {
+                zoom: 115%;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+
+            .neverending .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .box {
+                margin-bottom: 30px;
+            }
+
+            #gameplay .row {
+                flex-direction: column;
+            }
+
+            #why .row {
+                flex-direction: column;
+            }
+
+            #game .row {
+                flex-direction: column;
+            }
+
+            .container {
+                margin: 0;
+            }
+        }
