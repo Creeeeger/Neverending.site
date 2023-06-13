@@ -6,12 +6,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(300deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
+    background-color: #3e2f4e;
     zoom: 100%;
 }
 
 * {
     font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .container .btn {
