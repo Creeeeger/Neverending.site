@@ -8,16 +8,21 @@
 }
 
 body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
+    background-color: #3e2f4e;
     font-family: "Montserrat", sans-serif;
 }
 
 .container {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    transform: translate(-50%, 0%);
     left: 50%;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -34,13 +39,7 @@ form {
 }
 
 form p {
-    font-weight: 500;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 form input {
