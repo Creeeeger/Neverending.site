@@ -1,6 +1,5 @@
 # Neverending.site
-PreHost of Neverending game Website.
+Former hosting repository for the Neverending game website.
 
-
-### Roadmap
-- Replacing the placeholder media
+### Project status
+Completed, pending any future legal updates.
