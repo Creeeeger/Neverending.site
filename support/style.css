@@ -8,15 +8,14 @@
 }
 
 body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
+    background-color: #3e2f4e;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
 }
 
 .container {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    transform: translate(-50%, 0%);
     left: 50%;
 }
 
@@ -31,7 +30,7 @@ body {
 }
 
 form {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2); /* Adjust the alpha value (0.2 for more transparency) */
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -42,6 +41,7 @@ form {
     position: relative;
     transition: all 0.2s ease-in-out;
 }
+
 
 form p {
     font-weight: 500;
@@ -120,3 +120,6 @@ form input[type=button]:active {
     font-weight: bold; /* You can remove this line if it's duplicating the font-weight */
 }
 
+.email-link a {
+    text-decoration: underline;
+}
