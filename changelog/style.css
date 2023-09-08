@@ -10,9 +10,9 @@ body{
 }
 
 body {
-  background: linear-gradient(45deg, #FC466B, #3F5EFB);
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
+    background-color: #3e2f4e;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -23,7 +23,7 @@ body {
 }
 
 form {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -184,14 +184,9 @@ button:focus {
 
 
 .area{
-  background-color: #4158D0;
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
-  
+    background-color: #3e2f4e;
     width: 100%;
     height:100vh;
-    
-   
 }
 
 .circles{
@@ -314,12 +309,6 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
 }
 
-body {
-  background: linear-gradient(45deg, #FC466B, #3F5EFB);
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
-}
-
 .container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -328,7 +317,7 @@ body {
 }
 
 form {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
