@@ -202,18 +202,17 @@ body {
 
         .container .box:nth-child(1):before,
         .container .box:nth-child(1):after {
-            background: linear-gradient(315deg, #ffbc00, #ff0058)
+            background: linear-gradient(315deg, #03a9f4, #ff0058)
         }
 
         .container .box:nth-child(2):before,
         .container .box:nth-child(2):after {
-            background: linear-gradient(315deg, #03a9f4, #ff0058)
+            background: linear-gradient(to top left, #e9ff00, #ff0000)
         }
 
         .container .box:nth-child(3):before,
         .container .box:nth-child(3):after {
-            background: linear-gradient(315deg, #4dff03, #00d0ff)
-        }
+		   background: linear-gradient(to top left, #50ab2a, rgb(17, 144, 96) 53.78%, rgb(32, 221, 202) 73.11%, #0064ff)        }
 
         .container .box span {
             display: block;
@@ -299,7 +298,7 @@ body {
 
 .ob {
     position: relative;
-    margin: 0 40px; /* 20px space from the left and right sides */
+    margin: 0 10px; /* 20px space from the left and right sides */
     padding: 20px 40px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
