@@ -27,120 +27,125 @@ body {
     align-items: center;
 }
 
-    .container .btn a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 30px;
-        padding: 10px;
-        letter-spacing: 1px;
-        text-decoration: none;
-        overflow: hidden;
-        color: #fff;
-        font-weight: 400px;
-        z-index: 1;
-        transition: 0.5s;
-        backdrop-filter: blur(15px);
-    }
+.container .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400px;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
-    .container .btn:hover a {
-        letter-spacing: 3px;
-    }
-
-    .container .btn a::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-        transform: skewX(45deg) translate(0);
-        transition: 0.5s;
-        filter: blur(0px);
-    }
-
-    .container .btn:hover a::before {
-        transform: skewX(45deg) translate(200px);
-    }
-
-    .container .btn::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        bottom: -5px;
-        width: 30px;
-        height: 10px;
-        background: #f00;
-        border-radius: 10px;
-        transition: 0.5s;
-    }
-
-    .container .btn:hover::before {
-        bottom: 0;
-        height: 50%;
-        width: 80%;
-        border-radius: 30px;
-    }
-
-    .container .btn::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translatex(-50%);
-        top: -5px;
-        width: 30px;
-        height: 10px;
-        background: #f00;
-        border-radius: 10px;
-        transition: 0.5s;
-    }
-
-    .container .btn:hover::after {
-        top: 0;
-        height: 50%;
-        width: 80%;
-        border-radius: 30px;
-    }
-
-    .container .btn:nth-child(1)::before,
-    .container .btn:nth-child(1)::after {
-        background: #ff1f71;
-        box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
-    }
-
-    .container .btn:nth-child(2)::before,
-    .container .btn:nth-child(2)::after {
-        background: #2db2ff;
-        box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
-    }
-
-    .container .btn:nth-child(3)::before,
-    .container .btn:nth-child(3)::after {
-        background: #1eff45;
-        box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
-    }
 }
+
+.container .btn:hover a {
+    letter-spacing: 3px;
+}
+
+.container .btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}
+
+.container .btn:hover a::before {
+    transform: skewX(45deg) translate(200px);
+}
+
+.container .btn::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.container .btn:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.container .btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.container .btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.container .btn:nth-child(1)::before,
+.container .btn:nth-child(1)::after {
+    background: #ff1f71;
+    box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71, 0 0 60px #ff1f71;
+}
+
+.container .btn:nth-child(2)::before,
+.container .btn:nth-child(2)::after {
+    background: #2db2ff;
+    box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff, 0 0 60px #2db2ff;
+}
+
+.container .btn:nth-child(3)::before,
+.container .btn:nth-child(3)::after {
+    background: #1eff45;
+    box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
+}
+}
+
 .container .btn:nth-child(4)::before,
 .container .btn:nth-child(4)::after {
     background: #1eff45;
     box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
 }
+
 .container .btn:nth-child(5)::before,
 .container .btn:nth-child(5)::after {
     background: #2db2ff;
     box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45, 0 0 60px #1eff45;
 }
+
 .container .btn:nth-child(6)::before,
 .container .btn:nth-child(6)::after {
     background: #2db2ff;
@@ -154,128 +159,134 @@ body {
     padding: 40px 0;
 }
 
-    .container .box {
-        position: relative;
-	    width: 320px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 30px;
-        transition: 0.5s;
-    }
+.container .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
 
-        .container .box::before {
-            content: ' ';
-            position: absolute;
-            top: 0;
-            left: 50px;
-            width: 50%;
-            height: 100%;
-            text-decoration: none;
-            background: #fff;
-            border-radius: 8px;
-            transform: skewX(15deg);
-            transition: 0.5s;
-        }
+.container .box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
 
-        .container .box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50;
-            width: 50%;
-            height: 100%;
-            background: #fff;
-            border-radius: 8px;
-            transform: skewX(15deg);
-            transition: 0.5s;
-            filter: blur(30px);
-        }
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+}
 
-        .container .box:hover:before,
-        .container .box:hover:after {
-            transform: skewX(0deg);
-            left: 20px;
-            width: calc(100% - 90px);
-        }
+.container .box:hover:before,
+.container .box:hover:after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
 
-        .container .box:nth-child(1):before,
-        .container .box:nth-child(1):after {
-            background: linear-gradient(315deg, #03a9f4, #ff0058)
-        }
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058)
+}
 
-        .container .box:nth-child(2):before,
-        .container .box:nth-child(2):after {
-            background: linear-gradient(to top left, #e9ff00, #ff0000)
-        }
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after {
+    background: linear-gradient(to top left, #e9ff00, #ff0000)
+}
 
-        .container .box:nth-child(3):before,
-        .container .box:nth-child(3):after {
-		   background: linear-gradient(to top left, #50ab2a, rgb(17, 144, 96) 53.78%, rgb(32, 221, 202) 73.11%, #0064ff)        }
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after {
+    background: linear-gradient(to top left, #50ab2a, rgb(17, 144, 96) 53.78%, rgb(32, 221, 202) 73.11%, #0064ff)
+}
 
-        .container .box span {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 5;
-            pointer-events: none;
-        }
+.container .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+}
 
-            .container .box span::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                height: 0;
-                border-radius: 8px;
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(10px);
-                opacity: 0;
-                transition: 0.4s;
-                animation: animate 2s ease-in-out infinite;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.08)
-            }
+.container .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.4s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
+}
 
-        .container .box:hover span::before {
-            top: -50px;
-            left: 50px;
-            width: 100px;
-            height: 100px;
-            opacity: 1;
-        }
+.container .box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
 
-        .container .box span::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            opacity: 0;
-            transition: 0.6s;
-            animation: animate 2s ease-in-out infinite;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            animation-delay: -1s;
-        }
+.container .box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-        .container .box:hover span:after {
-            bottom: -50px;
-            right: 50px;
-            width: 100px;
-            height: 100px;
-            opacity: 1;
-        }
+    opacity: 0;
+    transition: 0.6s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    animation-delay: -1s;
+}
+
+.container .box:hover span:after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
 
 @keyframes animate {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(10px);
     }
 
@@ -290,6 +301,7 @@ body {
     padding: 20px 40px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1;
@@ -298,10 +310,13 @@ body {
 
 .ob {
     position: relative;
-    margin: 0 10px; /* 20px space from the left and right sides */
+    margin: 0 10px;
+    /* 20px space from the left and right sides */
     padding: 20px 40px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     z-index: 1;
@@ -332,11 +347,11 @@ body {
     margin-top: 5px;
 }
 
-    .container .box .content a:hover {
-        background: #ffcf4d;
-        border: 1px solid rgba(255, 0, 88, 0.4);
-        box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
-    }
+.container .box .content a:hover {
+    background: #ffcf4d;
+    border: 1px solid rgba(255, 0, 88, 0.4);
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
 
 .content_wrapper {
     display: flex;
@@ -369,41 +384,42 @@ button:focus {
     justify-content: center;
 }
 
-        @media screen and (max-width: 1000px) {
-            body {
-                zoom: 115%;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-            }
+@media screen and (max-width: 1000px) {
+    body {
+        zoom: 115%;
+    }
 
-            .btn {
-                margin-bottom: 10px;
-            }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
-            .neverending .container {
-                display: flex;
-                flex-direction: column;
-            }
+    .btn {
+        margin-bottom: 10px;
+    }
 
-            .box {
-                margin-bottom: 30px;
-            }
+    .neverending .container {
+        display: flex;
+        flex-direction: column;
+    }
 
-            #gameplay .row {
-                flex-direction: column;
-            }
+    .box {
+        margin-bottom: 30px;
+    }
 
-            #why .row {
-                flex-direction: column;
-            }
+    #gameplay .row {
+        flex-direction: column;
+    }
 
-            #game .row {
-                flex-direction: column;
-            }
+    #why .row {
+        flex-direction: column;
+    }
 
-            .container {
-                margin: 0;
-            }
-        }
+    #game .row {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0;
+    }
+}
