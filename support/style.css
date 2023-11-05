@@ -30,7 +30,7 @@ body {
 }
 
 form {
-    background: rgba(0, 0, 0, 0.2); /* Adjust the alpha value (0.2 for more transparency) */
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -116,8 +116,8 @@ form input[type=button]:active {
     -webkit-background-clip: text;
     font-family: sans-serif;
     -webkit-text-fill-color: transparent;
-    font-size: 40px; /* You can remove this line if it's duplicating the font-size */
-    font-weight: bold; /* You can remove this line if it's duplicating the font-weight */
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .email-link a {

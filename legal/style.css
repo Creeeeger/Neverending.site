@@ -38,9 +38,7 @@ form {
     transition: all 0.2s ease-in-out;
 }
 
-form p {
-
-}
+form p {}
 
 form input {
     background: transparent;
