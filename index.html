@@ -5,6 +5,7 @@
     <title>Neverending - the shooter</title>
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Neverending - the shooter game. Learn about its advanced AI, graphics, and gameplay features. Discover why Neverending stands out in the world of online shooters. Get it today on Epic Games and experience endless excitement for free!">
 </head>
 
 <body>
@@ -208,6 +209,11 @@
 </div>
 </div>
 <script>
+    if (window.innerWidth < 1000) {
+        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5');
+    }
+
+
     const menuLinks = document.querySelectorAll('.content');
     menuLinks.forEach(link => {
         link.addEventListener('click', (event) => {
