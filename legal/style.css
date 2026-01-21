@@ -1,47 +1,165 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --bg: #0f141a;
+    --bg-soft: #161c24;
+    --card: rgba(22, 28, 36, 0.85);
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #e9eef5;
+    --muted: #b7c1cc;
+    --accent: #00d1c1;
+    --accent-warm: #ffb347;
+    --shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #3e2f4e;
-    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+    background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(0, 209, 193, 0.2), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(255, 179, 71, 0.2), transparent 55%),
+        linear-gradient(160deg, #0b1117 0%, #0f141a 40%, #141b22 100%);
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: auto auto 10% -10%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(0, 209, 193, 0.25), transparent 70%);
+    filter: blur(10px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+body::after {
+    inset: 15% -10% auto auto;
+    background: radial-gradient(circle, rgba(255, 179, 71, 0.2), transparent 70%);
 }
 
 .container {
-    position: absolute;
-    transform: translate(-50%, 0%);
-    left: 50%;
-    font-weight: 500;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 960px;
+    margin: 48px auto 80px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 form {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    background: var(--card);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 40px clamp(24px, 4vw, 48px);
+    text-align: left;
     position: relative;
-    transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
 
-form p {}
+form::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.06), transparent 60%);
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+h1 {
+    font-size: clamp(2rem, 2.6vw, 2.5rem);
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin: 32px 0 12px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+p {
+    margin: 12px 0;
+    color: var(--muted);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 209, 193, 0.35);
+}
+
+a:hover {
+    color: var(--accent-warm);
+    border-bottom-color: rgba(255, 179, 71, 0.5);
+}
+
+ul,
+ol {
+    margin: 12px 0 18px 22px;
+    color: var(--muted);
+}
+
+li + li {
+    margin-top: 8px;
+}
+
+.wpembed-toc {
+    background: rgba(15, 20, 26, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 24px 0;
+}
+
+.wpembed-toc ol {
+    margin: 12px 0 0 18px;
+    columns: 2;
+    column-gap: 28px;
+}
+
+.madewith {
+    margin-top: 24px;
+    text-align: right;
+    opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+    .wpembed-toc ol {
+        columns: 1;
+    }
+}
 
 @media (max-width: 600px) {
+    .container {
+        margin-top: 32px;
+    }
+
     form {
-        width: 80%;
+        padding: 28px 20px;
+        border-radius: 18px;
     }
 }
