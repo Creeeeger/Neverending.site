@@ -1,5 +1,5 @@
 # Neverending.site
-PreHost of Neverending game Website.
- --> Site moved to https://willimowski.de/
+Former hosting repository for the Neverending game website.
 
-### Project done (Exept there comes legal shit)
+### Project status
+Completed, pending any future legal updates.
