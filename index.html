@@ -83,9 +83,7 @@
             </div>
             <div class="section-body reverse">
                 <figure class="media-frame">
-                    <video autoplay loop muted playsinline preload="metadata">
-                        <source src="media/vid1.mp4" type="video/mp4">
-                    </video>
+                    <video class="stream-video" autoplay loop muted playsinline preload="none" data-hls="media/vid1/stream.m3u8" data-fallback="media/vid1.mp4" data-start="0"></video>
                 </figure>
                 <div class="card-grid">
                     <article class="glass-card">
@@ -109,9 +107,7 @@
             </div>
             <div class="section-body">
                 <figure class="media-frame">
-                    <video autoplay loop muted playsinline preload="metadata">
-                        <source src="media/vid2.mp4" type="video/mp4">
-                    </video>
+                    <video class="stream-video" autoplay loop muted playsinline preload="none" data-hls="media/vid2/stream.m3u8" data-fallback="media/vid2.mp4" data-start="0"></video>
                 </figure>
                 <div class="card-grid">
                     <article class="glass-card">
@@ -154,6 +150,7 @@
             </div>
         </footer>
     </div>
+    <script src="scripts/hls.min.js"></script>
     <script>
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         let activeScroll = null;
@@ -221,6 +218,74 @@
                 activeScroll = window.requestAnimationFrame(step);
             });
         });
+
+        const streamVideos = Array.from(document.querySelectorAll(".stream-video"));
+
+        const loadStreamVideo = (video) => {
+            if (video.dataset.loaded === "true") return;
+            video.dataset.loaded = "true";
+
+            const hlsSrc = video.dataset.hls;
+            const fallbackSrc = video.dataset.fallback;
+            const startAt = Number(video.dataset.start);
+            const startTime = Number.isFinite(startAt) ? Math.max(0, startAt) : 0;
+
+            const setStartTime = () => {
+                const duration = video.duration || 0;
+                const safeStart = duration ? Math.min(startTime, Math.max(0, duration - 0.1)) : startTime;
+                video.currentTime = safeStart;
+            };
+
+            const requestPlay = () => {
+                if (!video.autoplay) return;
+                video.play().catch(() => {});
+            };
+
+            if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                video.src = hlsSrc;
+                video.addEventListener("loadedmetadata", setStartTime, { once: true });
+            } else if (window.Hls) {
+                const hls = new Hls({
+                    startPosition: startTime,
+                    maxBufferLength: 10,
+                    backBufferLength: 8,
+                    maxBufferSize: 8 * 1024 * 1024,
+                    maxBufferHole: 0.4
+                });
+                hls.loadSource(hlsSrc);
+                hls.attachMedia(video);
+                video._hls = hls;
+                video.addEventListener("loadedmetadata", setStartTime, { once: true });
+            } else if (fallbackSrc) {
+                video.src = fallbackSrc;
+                video.addEventListener("loadedmetadata", setStartTime, { once: true });
+            }
+
+            video.addEventListener("ended", () => {
+                if (!video.loop) return;
+                video.currentTime = 0;
+                requestPlay();
+            });
+
+            video.addEventListener("canplay", requestPlay, { once: true });
+        };
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        loadStreamVideo(entry.target);
+                        observer.unobserve(entry.target);
+                    });
+                },
+                { rootMargin: "200px 0px", threshold: 0.1 }
+            );
+
+            streamVideos.forEach((video) => observer.observe(video));
+        } else {
+            streamVideos.forEach((video) => loadStreamVideo(video));
+        }
     </script>
 </body>
 
