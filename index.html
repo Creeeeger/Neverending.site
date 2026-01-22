@@ -10,191 +10,127 @@
 </head>
 
 <body>
-    <div class="area" style="width: 100%; height: 100%;">
-        <div style="height: 50px;"></div>
-        <div class="ob">
-            <div class="container">
-                <div class="btn"><a href="https://store.epicgames.com/en-US/p/neverending">Epic Games - get it today</a></div>
-                <div style="height: 40px;"></div>
-                <div class="btn"><a href="support/index.html">Support</a></div>
-                <div style="height: 40px;"></div>
-                <div class="btn"><a href="changelog/index.html">Changelog</a></div>
-            </div>
-        </div>
-        <div style="height: 75px;"></div>
-        <div class="ob">
-            <div class="neverending">
-                <div class="container">
-                    <div class="box">
-                        <span></span>
-                        <div class="content">
-                            <h2>The Game</h2>
-                            <p>Take a look at the graphics, matchmaking, and fundamental features of Neverending.</p>
-                            <a href="#game">Read More</a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <span></span>
-                        <div class="content">
-                            <h2>The Gameplay</h2>
-                            <p>See what it's like to play Neverending and why you'll love it.</p>
-                            <a href="#gameplay">Read More</a>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <span></span>
-                        <div class="content">
-                            <h2>Why Neverending?</h2>
-                            <p>What makes Neverending so special and why is it different from other popular shooters?</p>
-                            <a href="#why">Read More</a>
-                        </div>
+    <div class="page">
+        <header class="hero panel">
+            <div class="hero-top">
+                <div class="hero-copy">
+                    <p class="eyebrow">Neverending</p>
+                    <h1>Neverending - the shooter</h1>
+                    <p class="lead">An online shooter built for endless rounds, smart matchmaking, and cinematic detail.</p>
+                    <div class="hero-links">
+                        <a class="pill" href="#game">The Game</a>
+                        <a class="pill" href="#gameplay">Gameplay</a>
+                        <a class="pill" href="#why">Why Neverending?</a>
                     </div>
                 </div>
+                <div class="hero-actions">
+                    <a class="button primary" href="https://store.epicgames.com/en-US/p/neverending">Epic Games - get it today</a>
+                    <a class="button ghost" href="support/index.html">Support</a>
+                    <a class="button ghost" href="changelog/index.html">Changelog</a>
+                </div>
             </div>
-        </div>
-        <div style="height: 75px;"></div>
-        <div class="ob">
-            <div id="game">
-                <div style="height: 75px;"></div>
-                <p style="text-align: center; background: -webkit-linear-gradient(left, #ffbc00, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">The Game</p>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 60%; height: 0; padding-bottom: 33.75%; position: relative;">
-                        <img src="media/game.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 30px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);">
-                    </div>
+            <div class="feature-grid">
+                <article class="feature-card" style="--delay: 0s;">
+                    <h3>The Game</h3>
+                    <p>Take a look at the graphics, matchmaking, and fundamental features of Neverending.</p>
+                    <a class="text-link" href="#game">Read More</a>
+                </article>
+                <article class="feature-card" style="--delay: 0.12s;">
+                    <h3>The Gameplay</h3>
+                    <p>See what it's like to play Neverending and why you'll love it.</p>
+                    <a class="text-link" href="#gameplay">Read More</a>
+                </article>
+                <article class="feature-card" style="--delay: 0.24s;">
+                    <h3>Why Neverending?</h3>
+                    <p>What makes Neverending so special and why is it different from other popular shooters?</p>
+                    <a class="text-link" href="#why">Read More</a>
+                </article>
+            </div>
+        </header>
 
-                    <div class="container">
-                        <div class="box">
-                            <span></span>
-                            <div class="content">
-                                <p>Thanks to advanced AI systems, Neverending can automatically detect how good you are and whether someone is cheating. So you only get into lobbies that are tailored for you.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="display: flex; justify-content: space-around;">
-                    <div class="container">
-                        <div class="box">
-                            <span></span>
-                            <div class="content">
-                                <p>Neverending utilizes cutting-edge technologies to deliver an immersive gaming experience. One of the standout features is raytracing, which enhances graphics realism, especially when it comes to lifelike reflections.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="box">
-                            <span></span>
-                            <div class="content">
-                                <p>With cross-platform game support and cloud storage, you can play anywhere on all your devices.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="box">
-                            <span></span>
-                            <div class="content">
-                                <p>With the offline game mode, you can also play against bots. Thanks to the latest AI technologies, you won't feel any difference.</p>
-                            </div>
-                        </div>
-                    </div>
+        <section id="game" class="section panel">
+            <div class="section-head">
+                <p class="eyebrow">Core systems</p>
+                <h2>The Game</h2>
+                <p class="lead">Precision matchmaking, cinematic rendering, and always-on progression.</p>
+            </div>
+            <div class="section-body">
+                <figure class="media-frame">
+                    <img src="media/game.png" alt="Gameplay scene from Neverending" loading="lazy">
+                </figure>
+                <div class="card-grid">
+                    <article class="glass-card">
+                        <p>Thanks to advanced AI systems, Neverending can automatically detect how good you are and whether someone is cheating. So you only get into lobbies that are tailored for you.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>Neverending utilizes cutting-edge technologies to deliver an immersive gaming experience. One of the standout features is raytracing, which enhances graphics realism, especially when it comes to lifelike reflections.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>With cross-platform game support and cloud storage, you can play anywhere on all your devices.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>With the offline game mode, you can also play against bots. Thanks to the latest AI technologies, you won't feel any difference.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-        <div style="height: 75px;"></div>
-        <div class="ob">
-            <div id="gameplay">
-                <div style="height: 150px;"></div>
-                <p style="text-align: center; background: -webkit-linear-gradient(left, #ffbc00, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">Gameplay</p>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 100%; height: 0; padding-bottom: 55%; position: relative;">
-                        <video autoplay="" loop="" muted="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 30px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);">
-                            <source src="media/vid1.mp4" type="video/mp4">
-                        </video>
-                    </div>
+        </section>
 
+        <section id="gameplay" class="section panel">
+            <div class="section-head">
+                <p class="eyebrow">In the arena</p>
+                <h2>Gameplay</h2>
+                <p class="lead">Responsive controls, reliable servers, and a rhythm that feels instantly familiar.</p>
+            </div>
+            <div class="section-body reverse">
+                <figure class="media-frame">
+                    <video autoplay loop muted playsinline preload="metadata">
+                        <source src="media/vid1.mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <div class="card-grid">
+                    <article class="glass-card">
+                        <p>In Neverending, we take pride in our commitment to providing reliable servers. Our top-notch infrastructure ensures smooth gameplay experiences, minimal downtime, and a lag-free environment, allowing you to fully immerse yourself in the action without interruption.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>You will recognize the controls and gameplay like in your other classics. So start straight away without lengthy tutorials.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>Neverending is similar to other common shooters, but we have improved everything that players don't like.</p>
+                    </article>
                 </div>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;">
-                    <div class="container">
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>In Neverending, we take pride in our commitment to providing reliable servers. Our top-notch infrastructure ensures smooth gameplay experiences, minimal downtime, and a lag-free environment, allowing you to fully immerse yourself in the action without interruption.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>You will recognize the controls and gameplay like in your other classics. So start straight away without lengthy tutorials.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>Neverending is similar to other common shooters, but we have improved everything that players don't like.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </section>
 
+        <section id="why" class="section panel">
+            <div class="section-head">
+                <p class="eyebrow">Why it lasts</p>
+                <h2>Why Neverending?</h2>
+                <p class="lead">Free to play, community steered, and always updating in the background.</p>
+            </div>
+            <div class="section-body">
+                <figure class="media-frame">
+                    <video autoplay loop muted playsinline preload="metadata">
+                        <source src="media/vid2.mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <div class="card-grid">
+                    <article class="glass-card">
+                        <p>Enjoy endless excitement in Neverending for free! Dive into boundless entertainment without the worry of buying a game you might not adore. Discover the joy of limitless gaming!</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>In Neverending, we emphatically reject pay-to-win mechanics, prioritizing fair play as one of our core principles.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>The community is an integral part of the game to ensure it never gets boring. This allows for quicker balancing compared to traditional games.</p>
+                    </article>
+                    <article class="glass-card">
+                        <p>Neverending downloads updates and smaller patches as you play for uninterrupted fun, so you can also play quick 5-minute rounds.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-        <div style="height: 75px;"></div>
-        <div class="ob">
-            <div id="why">
-                <div style="height: 150px;"></div>
-                <p style="text-align: center; background: -webkit-linear-gradient(left, #ffbc00, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">Why Neverending?</p>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;">
-                    <div style="width: 100%; height: 0; padding-bottom: 55%; position: relative;">
-                        <video autoplay="" loop="" muted="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 30px; box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);">
-                            <source src="media/vid2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="container">
-                        <div class="box">
-                            <span></span>
-                            <div class="content">
-                                <p>Enjoy endless excitement in Neverending for free! Dive into boundless entertainment without the worry of buying a game you might not adore. Discover the joy of limitless gaming!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="display: flex; align-items: center; justify-content: center;">
-                    <div class="container">
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>In Neverending, we emphatically reject pay-to-win mechanics, prioritizing fair play as one of our core principles.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>The community is an integral part of the game to ensure it never gets boring. This allows for quicker balancing compared to traditional games.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="margin: 0 auto;">
-                            <div class="box">
-                                <span></span>
-                                <div class="content">
-                                    <p>Neverending downloads updates and smaller patches as you play for uninterrupted fun, so you can also play quick 5-minute rounds.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="height: 75px;"></div>
-        <footer class="footer">
+        </section>
+
+        <footer class="footer panel">
             <div class="footer-inner">
                 <div class="footer-brand">
                     <p class="footer-eyebrow">Neverending</p>
@@ -218,58 +154,6 @@
             </div>
         </footer>
     </div>
-    </div>
-    </div>
-    <script>
-        if (window.innerWidth < 1000) {
-            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.75');
-        }
-
-
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-        const easeInOutCubic = (t) => {
-            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        };
-
-        const smoothScrollTo = (target) => {
-            const start = window.scrollY;
-            const end = target.getBoundingClientRect().top + start;
-            const distance = end - start;
-            const duration = Math.min(1200, Math.max(500, Math.abs(distance) * 0.6));
-            let startTime = null;
-
-            const step = (timestamp) => {
-                if (!startTime) startTime = timestamp;
-                const elapsed = timestamp - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = easeInOutCubic(progress);
-                window.scrollTo(0, start + distance * eased);
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-
-            window.requestAnimationFrame(step);
-        };
-
-        document.querySelectorAll('a[href^="#"]').forEach((link) => {
-            const targetId = link.getAttribute("href");
-            if (!targetId || targetId.length < 2) return;
-            const targetSection = document.querySelector(targetId);
-            if (!targetSection) return;
-
-            link.addEventListener("click", (event) => {
-                event.preventDefault();
-                history.pushState(null, "", targetId);
-                if (prefersReducedMotion) {
-                    targetSection.scrollIntoView();
-                    return;
-                }
-                smoothScrollTo(targetSection);
-            });
-        });
-    </script>
 </body>
 
 </html>
