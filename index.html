@@ -154,6 +154,74 @@
             </div>
         </footer>
     </div>
+    <script>
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let activeScroll = null;
+        let cancelBound = false;
+
+        const cancelScroll = () => {
+            if (activeScroll) {
+                cancelAnimationFrame(activeScroll);
+                activeScroll = null;
+            }
+        };
+
+        const bindCancelEvents = () => {
+            if (cancelBound) return;
+            cancelBound = true;
+            ["wheel", "touchstart", "mousedown", "keydown"].forEach((eventName) => {
+                window.addEventListener(eventName, cancelScroll, { passive: true });
+            });
+        };
+
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+            const targetId = link.getAttribute("href");
+            if (!targetId || targetId.length < 2) return;
+            const targetSection = document.querySelector(targetId);
+            if (!targetSection) return;
+
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                history.pushState(null, "", targetId);
+                if (prefersReducedMotion) {
+                    targetSection.scrollIntoView({ behavior: "auto", block: "start" });
+                    return;
+                }
+
+                const start = window.scrollY;
+                const end = targetSection.getBoundingClientRect().top + start;
+                const distance = end - start;
+                if (Math.abs(distance) < 6) return;
+
+                bindCancelEvents();
+                cancelScroll();
+
+                const duration = Math.min(900, Math.max(260, Math.sqrt(Math.abs(distance)) * 18));
+                const startTime = performance.now();
+
+                const easeInOutExpo = (t) => {
+                    if (t === 0 || t === 1) return t;
+                    return t < 0.5
+                        ? Math.pow(2, 20 * t - 10) / 2
+                        : (2 - Math.pow(2, -20 * t + 10)) / 2;
+                };
+
+                const step = (now) => {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = easeInOutExpo(progress);
+                    window.scrollTo(0, Math.round(start + distance * eased));
+                    if (progress < 1) {
+                        activeScroll = window.requestAnimationFrame(step);
+                    } else {
+                        activeScroll = null;
+                    }
+                };
+
+                activeScroll = window.requestAnimationFrame(step);
+            });
+        });
+    </script>
 </body>
 
 </html>

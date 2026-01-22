@@ -22,7 +22,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
@@ -455,6 +455,10 @@ h3 {
 
     .footer-media {
         align-items: flex-start;
+    }
+
+    .footer-logos {
+        justify-content: flex-start;
     }
 }
 
