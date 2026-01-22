@@ -215,15 +215,47 @@
         }
 
 
-        const menuLinks = document.querySelectorAll('.content');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        const easeInOutCubic = (t) => {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        };
+
+        const smoothScrollTo = (target) => {
+            const start = window.scrollY;
+            const end = target.getBoundingClientRect().top + start;
+            const distance = end - start;
+            const duration = Math.min(1200, Math.max(500, Math.abs(distance) * 0.6));
+            let startTime = null;
+
+            const step = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeInOutCubic(progress);
+                window.scrollTo(0, start + distance * eased);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+
+            window.requestAnimationFrame(step);
+        };
+
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+            const targetId = link.getAttribute("href");
+            if (!targetId || targetId.length < 2) return;
+            const targetSection = document.querySelector(targetId);
+            if (!targetSection) return;
+
+            link.addEventListener("click", (event) => {
                 event.preventDefault();
-                const targetSectionId = event.target.getAttribute('href');
-                const targetSection = document.querySelector(targetSectionId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                history.pushState(null, "", targetId);
+                if (prefersReducedMotion) {
+                    targetSection.scrollIntoView();
+                    return;
+                }
+                smoothScrollTo(targetSection);
             });
         });
     </script>
