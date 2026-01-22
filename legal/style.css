@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap");
 
 :root {
-    --bg: #0f141a;
-    --bg-soft: #161c24;
-    --card: rgba(22, 28, 36, 0.85);
-    --border: rgba(255, 255, 255, 0.08);
-    --text: #e9eef5;
-    --muted: #b7c1cc;
-    --accent: #00d1c1;
-    --accent-warm: #ffb347;
-    --shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    --bg: #3e2f4e;
+    --glass: rgba(0, 0, 0, 0.2);
+    --glass-soft: rgba(255, 255, 255, 0.05);
+    --stroke: rgba(255, 255, 255, 0.15);
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.7);
+    --accent-start: #ffbc00;
+    --accent-end: #ff0058;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -23,33 +23,12 @@ body {
     color: var(--text);
     font-family: "Roboto", sans-serif;
     line-height: 1.7;
-    background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(0, 209, 193, 0.2), transparent 60%),
-        radial-gradient(900px 500px at 100% 0%, rgba(255, 179, 71, 0.2), transparent 55%),
-        linear-gradient(160deg, #0b1117 0%, #0f141a 40%, #141b22 100%);
-}
-
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    inset: auto auto 10% -10%;
-    width: 380px;
-    height: 380px;
-    background: radial-gradient(circle, rgba(0, 209, 193, 0.25), transparent 70%);
-    filter: blur(10px);
-    z-index: -1;
-    opacity: 0.7;
-}
-
-body::after {
-    inset: 15% -10% auto auto;
-    background: radial-gradient(circle, rgba(255, 179, 71, 0.2), transparent 70%);
+    background-color: var(--bg);
 }
 
 .container {
     max-width: 960px;
-    margin: 48px auto 80px;
+    margin: 60px auto 90px;
     padding: 0 24px;
     display: flex;
     flex-direction: column;
@@ -57,21 +36,24 @@ body::after {
 }
 
 form {
-    background: var(--card);
-    border-radius: 24px;
-    border: 1px solid var(--border);
+    background: var(--glass);
+    border-radius: 40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: var(--shadow);
     padding: 40px clamp(24px, 4vw, 48px);
     text-align: left;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 form::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(140deg, rgba(255, 255, 255, 0.06), transparent 60%);
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.08), transparent 60%);
     pointer-events: none;
 }
 
@@ -84,8 +66,11 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(2rem, 2.6vw, 2.5rem);
+    font-size: clamp(2rem, 2.8vw, 2.6rem);
     margin-bottom: 16px;
+    background: -webkit-linear-gradient(left, var(--accent-start), var(--accent-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -94,10 +79,10 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--muted);
 }
 
@@ -107,14 +92,14 @@ p {
 }
 
 a {
-    color: var(--accent);
+    color: var(--accent-start);
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 209, 193, 0.35);
+    border-bottom: 1px solid rgba(255, 188, 0, 0.4);
 }
 
 a:hover {
-    color: var(--accent-warm);
-    border-bottom-color: rgba(255, 179, 71, 0.5);
+    color: var(--accent-end);
+    border-bottom-color: rgba(255, 0, 88, 0.45);
 }
 
 ul,
@@ -128,11 +113,20 @@ li + li {
 }
 
 .wpembed-toc {
-    background: rgba(15, 20, 26, 0.6);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    background: var(--glass-soft);
+    border: 1px solid var(--stroke);
+    border-radius: 24px;
     padding: 20px 22px;
     margin: 24px 0;
+    box-shadow: var(--shadow);
+}
+
+ol.wpembed-toc {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
 }
 
 .wpembed-toc ol {
@@ -160,6 +154,6 @@ li + li {
 
     form {
         padding: 28px 20px;
-        border-radius: 18px;
+        border-radius: 24px;
     }
 }
