@@ -22,6 +22,7 @@ body {
     min-height: 100vh;
     background-color: var(--bg);
     color: var(--text);
+    overflow-x: hidden;
 }
 
 a {
@@ -82,6 +83,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
     background: var(--glass-soft);
     border-radius: 30px;
@@ -93,6 +95,7 @@ a {
 .contact-info {
     display: grid;
     gap: 8px;
+    min-width: 0;
 }
 
 .label {
@@ -106,6 +109,8 @@ a {
     font-weight: 600;
     font-size: 1.1rem;
     text-decoration: none;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     background: -webkit-linear-gradient(left, var(--accent-start), var(--accent-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -163,7 +168,7 @@ a {
 .faq-grid {
     display: grid;
     gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
 }
 
 .faq-item {
@@ -184,9 +189,13 @@ a {
     line-height: 1.5;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 980px) {
+    .page {
+        padding: 56px 5vw;
+    }
+
     .panel {
-        padding: 28px;
+        border-radius: 38px;
     }
 
     .contact {
@@ -196,5 +205,49 @@ a {
 
     .button {
         width: 100%;
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 760px) {
+    .page {
+        padding: 36px 4vw;
+    }
+
+    .panel {
+        border-radius: 30px;
+        padding: 24px;
+    }
+
+    .hero {
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.9rem, 8vw, 2.4rem);
+    }
+
+    .email {
+        font-size: 1rem;
+    }
+
+    .faq h2 {
+        font-size: 1.7rem;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .panel {
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .contact {
+        padding: 16px;
+        border-radius: 22px;
     }
 }
